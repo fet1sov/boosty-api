@@ -1,0 +1,39 @@
+{
+  "name": "boosty-api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && tsc -p tsconfig.types.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fet1sov/boosty-api.git"
+  },
+  "keywords": [],
+  "author": "fet1sov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fet1sov/boosty-api/issues"
+  },
+  "homepage": "https://github.com/fet1sov/boosty-api#readme",
+  "exports": {
+    "./*": {
+      "types": "./_types/*.d.ts",
+      "require": "./_cjs/*.js",
+      "import": "./_esm/*.js",
+      "default": "./_esm/*.js"
+    }
+  },
+  "typesVersions": {
+    ">=4.2": {
+      "*": [
+        "_types/*"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.3"
+  }
+}
